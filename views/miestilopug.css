@@ -1,0 +1,141 @@
+.img-container{
+      width: 200px;
+      max-width: 100%;
+      margin: 0 auto;
+}
+.img-container h1,.img-container h2 {
+      padding: 15px;
+      border-bottom: 1px solid #222; 
+}
+.img-container p {
+      text-align: right;
+      font-size: 1.2em;
+      margin-top: 1em;
+}
+img {
+      max-width: 100%;
+}
+.right-space {
+      margin-right: 1em;
+}
+.espaciado-largo {
+      padding: 10px 15px;
+}
+.espaciado-largo2 {
+      padding-top: 170px;
+}
+.espaciado-largo3 {
+      padding-top: 8px;
+}
+.azul {
+      background-color: #0492e4;
+}
+.blanco {
+      background-color: white;
+}
+.texto-blanco {
+      color: white;
+}
+.border {
+      border: solid 1px rgb(173, 173, 173);
+}
+.tr:nth-of-type(odd) {
+      background-color: #68deee;
+}
+.centrado{
+      text-align: center;
+}
+.izquierda{
+      text-align: left;
+}
+.objetos-en-linea{
+      text-align: right;
+      display: inline-block;
+      margin-right: 1em;
+      padding: 10px 15px;
+      vertical-align: right;
+      color: #0492e4;
+      width: 100%;
+}
+.imagen-en-linea{
+      text-align: center;
+      display: inline-block;
+      margin-right: 1em;
+      padding: 10px 15px;
+      vertical-align: right;
+      color: #0492e4;
+      height: auto;
+      width: 100%;
+}
+
+#registro_u a {
+        display: block;
+        color:#18c0d6;
+        text-align: center;
+      }
+#bienvenida p {
+              display: block;
+              color: rgb(101, 62, 243);
+              text-align: center;
+              padding: 16px;
+              text-decoration: none;
+      }
+#almacenactual {
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #c692f700;
+      border: none;
+      /*vertical-align: middle;*/
+      /*width: 25%;*/
+}
+#almacenactual tr:nth-child(even) {
+      background-color: #c692f7;
+}
+#almacenactual tr:hover {
+      background-color: rgb(243, 176, 176);
+}
+#almacenactual th {
+   /*width: 25%;*/
+   background-color: #4b0988;
+   text-align: center;
+   vertical-align: middle;
+   padding: 0.3em;
+   color: #000000;
+   color: white;
+   font-size: 22px;
+   border: none;
+}
+#almacenactual td {
+      /*width: 25%;*/
+      text-align: center;
+      vertical-align: middle;
+      padding: 0.3em;
+      color: #000000;
+      font-size: 22px;
+      border: none;
+   }
+form.link {
+      display: inline-block;
+}
+form.link input[type="submit"]{
+      background-color: transparent;
+      border: none;
+      color: rgb(32, 24, 24);
+}
+nav div ul li {
+      list-style: none;
+      color: rgb(255, 255, 255);
+}
+nav li {
+      color: rgb(255, 255, 255);
+}
+nav a {
+      color: rgb(255, 255, 255);
+}
+nav a:hover {
+      background-color:#fcfa98;
+}
+.letrapequeña {
+      font-size: 1.0em;
+}

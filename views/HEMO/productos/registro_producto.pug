@@ -1,0 +1,20 @@
+extends ../../layout.pug
+block contenido
+        h1 Registro de productos
+        form(action="/HEMO/productos" method="POST" enctype="multipart/form-data")
+            div
+                label(for="producto") Producto:  
+                input(name="producto" required type="text" placeholder="producto" id="producto")
+                br
+                br
+            div
+                label(for="fondofijo") Fondo fijo:  
+                input(name="fondofijo" required type="text" placeholder="Cantidad de fondo fijo" id="fondofijo")
+                br
+                br
+            div
+                input(type="submit" value="ingreso" class="btn btn-info")
+                br
+                br
+            div
+                h6!=resultado

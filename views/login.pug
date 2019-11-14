@@ -1,0 +1,19 @@
+extends layout.pug
+block contenido
+        p
+            br
+        form(action="/Login_confirmado" method="POST" enctype="multipart/form-data")
+            div
+                label(for="usuario") Usuario:  
+                input(name="usuario" required type="text" placeholder="usuario" id="usuario")
+                br
+                br
+            div
+                label(for="contraseña") Contraseña:  
+                input(name="contraseña" required type="passwd" id="contraseña")
+                br
+                br
+            div
+                input(type="submit" value="ingreso" class="btn btn-info")
+                br
+                br

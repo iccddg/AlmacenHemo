@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
+        script(src="/socket.io/socket.io.js")
+        script(src="/recursos/js/handlebars.js")
+        title AlmacenHEMO
+        style
+            include ./miestilopug.css
+    body
+        nav(class="navbar navbar-expand-lg navbar-light bg-primary texto-blanco letrapequeña")
+            div(class="container texto-blanco")
+                if(!user)    
+                    a(class="navbar-brand texto-blanco" href="/") Inicio
+                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                    span(class="navbar-toggler-icon")
+                div(class="collapse navbar-collapse" id="navbarSupportedContent")
+                    ul(class="navbar-nav mr-auto")
+                        li(class="nav-item dropdown") 
+                            a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Ingresos
+                            div(class="dropdown-menu" aria-labelledby="navbarDropdown")   
+                                a(class="dropdown-item" href="/HEMO/ingreso_almacen") Ingresos Actuales
+                                div(class="dropdown-divider")
+                                a(class="dropdown-item" href="/HEMO/Ingreso_Mercancia") Ingreso Mercancia
+                        li(class="nav-item dropdown") 
+                            a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Salidas
+                            div(class="dropdown-menu" aria-labelledby="navbarDropdown")   
+                                a(class="dropdown-item" href="/HEMO/salida_almacen") Salidas Actuales
+                                div(class="dropdown-divider")
+                                a(class="dropdown-item" href="/Hemo/Salida_Mercancia") Salida Mercancia
+                        li(class="nav-item dropdown") 
+                            a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Productos
+                            div(class="dropdown-menu" aria-labelledby="navbarDropdown")   
+                                a(class="dropdown-item" href="/HEMO/productos") Productos Actuales
+                                div(class="dropdown-divider")
+                                a(class="dropdown-item" href="/Hemo/registro_producto") Registrar Producto nuevo
+                            if(user)            
+                                li(class="nav-item")
+                                    form(action="/" method="POST", class="link espaciado-largo3" enctype="multipart/form-data")
+                                        input(type="submit", value="Cerrar sesion")
+                                li(class="nav-item")
+                                    a(class="navbar-brand")!=user.usuario
+    block contenido

@@ -1,0 +1,7 @@
+extends ../../layout.pug
+block contenido
+    div(class="img-container")
+        h1= producto.producto
+        h2= producto.fondofijo
+        if(typeof producto.creator != "undefined")
+            p creado por #{imagen.creator.usuario}

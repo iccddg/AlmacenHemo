@@ -1,0 +1,31 @@
+extends ../../layout.pug
+block contenido
+    div(class="container" id="productos")
+        h1(class="obejtos-en-linea centrado") Productos actuales
+        table#almacenactual
+                .row
+                    .col-md-4(class="centrado")
+                        h3 Producto
+                    .col-md-4(class="izquierda")
+                        h3 Fondo Fijo
+                each item in producto
+                    .blanco.border.tr.espaciado-largo
+                        .row
+                            .col-md-4
+                                h3=item.producto
+                            .col-md-4
+                                h3=item.fondofijo
+                            .col-md-4
+                                a(href="/hemo/productos/" + item.id + "/edit",class="right-space") Editar
+                                form(action="/hemo/productos/"+item.id+"?_method=delete" method="POST",
+                                class="link" enctype="multipart/form-data")
+                                    input(type="submit", value="Eliminar")
+                    script(type="application/Handlebars" id="producto-template")
+                        .blanco.border.tr.espaciado-largo
+                            .row
+                                .col-md-6
+                                    h3="{{producto}}"
+                                .col-md-4
+                                    h3="{{fondofijo}}"
+
+    script(type="application/javascript" src="/recursos/js/cliente.js")

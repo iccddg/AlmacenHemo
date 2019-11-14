@@ -1,0 +1,12 @@
+extends layout.pug
+block contenido
+        div(class="imagen-en-linea")
+            img(src="/recursos/rinon.jpg", alt="riñon")
+        h1#bienvenida
+            p Bienvenido
+            p Almacen Hemodialisis
+        h3#registro_u
+            a(href="/Login") Iniciar sesión
+        h3#registro_u
+            a(href="/Registro") registro
+        p!=estado

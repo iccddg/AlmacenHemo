@@ -1,0 +1,30 @@
+extends layout.pug
+block contenido
+        p
+            br
+        form(action="/Registro_confirmado" method="POST" enctype="multipart/form-data")
+            div
+                label(for="usuario") Usuario:  
+                input(name="usuario" required type="text" placeholder="usuario" id="usuario")
+                br
+                br
+            div
+                label(for="contraseña") Contraseña:  
+                input(name="contraseña" required type="password" id="contraseña")
+                br
+                br
+            div
+                label(for="confirmacion_contraseña") Confirma Contraseña:  
+                input(name="confirmacion_contraseña" required type="password" id="confirmacion_contraseña")
+                br
+                br
+            div
+                label(for="correo") Correo:  
+                input(name="correo" required type="password" id="correo")
+                br
+                br
+            div
+                input(type="submit" value="Registro" class="btn btn-info")
+                br
+                br
+        p!=usuario_registrado

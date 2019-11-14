@@ -1,0 +1,20 @@
+extends ../../layout.pug
+block contenido
+        h1 Ingreso de Mercancia
+        form(action="/hemo/ingreso_almacen" method="POST" enctype="multipart/form-data")
+            div
+                label(for="producto") Producto:
+                select(class="form-control" id="producto" name="producto")
+                    each item in producto
+                        option=item.producto 
+            div
+                label(for="cantidad") Cantidad:  
+                input(name="cantidad" required type="text" placeholder="cantidad" id="cantidad")
+                br
+                br
+            div
+                input(type="submit" value="ingreso" class="btn btn-info")
+                br
+                br
+            div
+                h6!=resultado

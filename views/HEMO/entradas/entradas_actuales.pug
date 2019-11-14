@@ -1,0 +1,17 @@
+extends ../../layout.pug
+block contenido
+    div(class="container")
+        h1(class="obejtos-en-linea centrado") Ingresos actuales
+        table#almacenactual
+                .row
+                    .col-md-8
+                        h3 Producto
+                    .col-md-4
+                        h3 Cantidad
+                each item in producto
+                    .blanco.border.tr.espaciado-largo
+                        .row
+                            .col-md-8
+                                h3=item.producto
+                            .col-md-4
+                                h3=item.cantidad
